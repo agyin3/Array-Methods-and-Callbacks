@@ -3,6 +3,7 @@
 ## Advanced JavaScript
 
 ## Array Methods and Callbacks
+*Note*: Please add the LIVE server extension to your visual studio code and use it for this project. https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer - this will make viewing your data easier. 
 
 ## Objectives
 
@@ -46,7 +47,7 @@ Your goal today will be to manipulate the data using array methods and callbacks
 
 ## Instructions
 
-### Task 1: Set up Project and Tests
+### Task 1: Set up Project
 
 Using VSCode and a Command Line:
 
@@ -54,9 +55,6 @@ Using VSCode and a Command Line:
 2. Clone your fork (not Lambda's repo by mistake!).
 3. `cd` into your newly cloned repository.
 4. Create a new branch by typing `git checkout -b <firstName-lastName>`.
-5. Install dependencies by typing `npm install`.
-6. Run tests by typing `npm run test:watch`.
-7. Work on your branch, push commits and create PR as usual.
 
 ### Task 2: Minimum Viable Product
 
@@ -64,21 +62,36 @@ Find the file `index.js` and complete the tasks until all of your tests pass.
 
 You may want to use the [World Cup summary data](https://www.foxsports.com/soccer/fifa-world-cup/history) on Fox Sports to check your math as you go.
 
+### Task 2b: Exit Ticket
+
+Once you begin, you will have 15 minutes to answer the questions [here](https://app.codesignal.com/public-test/pHkwTDmFG4moZNJWy/64uEYwk5AxxRxE).
+
+The completion of these questions is mandatory for MVP. However, passing the quiz doesn't affect your standing as a Lambda School student whatsoever. This is Lambda School testing itself! Please answer honestly and to the best of your ability without using external references.
+
 ### Task 3: Stretch Goals
 
 After you have completed the requirements, create a new file called `stretch.js` and practice with Array methods more.
 
 See if you can complete one or more of the following challenges:
 
-- [ ] Create a function that takes a country code as a parameter and returns their total number of World Cup appearances.
-- [ ] Create a function that takes a country code as a parameter and determines how many goals that country has scored in World Cup games since 1930.
+- [ ] Create a function that takes country initials as a parameter and returns their total number of World Cup appearances.
+- [ ] Account for ties in your 'finals' data set
+- [ ] Create a function that takes country initials as a parameter and determines how many goals that country has scored in World Cup games since 1930.
 - [ ] Use `.map` to format country names into `<h1>` HTML headers.
 
-## FAQ 
+## FAQ
 
 **Where is my data?**
 
-Your data lives in a file called `fifa.js`. In order to work with and use your data in the `index.js` file, we used the import function of JavaScript. The first line in your file should be `import { fifa } from "fifa.js"`, which will save all of the data into an object called fifa. You can confirm that your data has been imported correctly by running `console.log(fifa)` in your `index.js` file.
+Your data lives in a file called `fifa.js`. In order to work with and use your data in the `index.js` file, we used the import function of JavaScript. The first line in your file should be `import { fifaData } from "fifa.js"`, which will save all of the data into an object called fifaData. You can confirm that your data has been imported correctly by running `console.log(fifaData)` in your `index.js` file.
+
+**What about ties?**
+
+In some cases, when the outcome of a game was decided by penalty kicks, the home team and away team will have the same number of goals scored. You can ignore ties for the purpose of these tasks, but you can also look to the "Win conditions" key  and splice out the winning team as a stretch goal. (See example below)
+
+```
+Win conditions": "France win on penalties (3 - 4)",
+````
 
 ## Resources
 
